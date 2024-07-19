@@ -22,7 +22,7 @@ df1 = df.copy()
 
 st.subheader('Clear the DataFrame')
 show_table = st.button("Show table Data Fream processing")
-
+df1 = df1.loc[:, ~df1.columns.str.contains('^Unnamed')]
 if show_table:
     tab13,tab14,tab15 = st.tabs(["With Nan values","There are no Nan values","Detecting outlires"])
     with  tab13:
