@@ -1,0 +1,12 @@
+body {
+    background-image: url('https://img.freepik.com/premium-photo/restaurant-food-black-plate-restaurant-style-photo-top-view_946657-7963.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.stApp {
+    background: #ffffffb7; /* Orqa fonni biroz shaffof qilish */
+    padding: 2rem;
+    border-radius: 10px;
+}
