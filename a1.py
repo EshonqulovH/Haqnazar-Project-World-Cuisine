@@ -534,5 +534,13 @@ if show_table:
     fig, ax = plt.subplots()
     sns.histplot(filtered_df['Rating'], bins=20, ax=ax)
     st.pyplot(fig)
+
+    avg_price_cuisine = filtered_df.groupby('Number of Reviews')['Service Quality Score'].mean().reset_index()
+    fig, ax = plt.subplots()
+    avg_price_cuisine.plot(kind="line",ax=ax,color="r")
+    ax.set_xlabel("Number of Rewiews")
+    ax.set_ylabel("Service Quality Score")
+    st.pyplot(fig)
+
 else:
     st.sidebar.write("Iltimos, jadvalni ko'rish uchun 'Show Table' tugmasini bosing.")
