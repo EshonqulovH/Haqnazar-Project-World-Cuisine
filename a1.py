@@ -543,5 +543,12 @@ if show_table:
     ax.set_ylabel("Service Quality Score")
     st.pyplot(fig)
 
+    st.subheader('Service Quality Score by Ambience Score')
+    avg_price_cuisine = filtered_df.groupby('Ambience Score')['Service Quality Score'].mean().reset_index()
+    fig, ax = plt.subplots()
+    sns.scatterplot(y='Ambience Score', x='Service Quality Score', data=avg_price_cuisine, ax=ax)
+    st.pyplot(fig)
+
+
 else:
     st.sidebar.write("Iltimos, jadvalni ko'rish uchun 'Show Table' tugmasini bosing.")
